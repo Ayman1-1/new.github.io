@@ -1,0 +1,504 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-color: #00031c;
+  color: white;
+}
+
+header {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px 20px 20px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 800;
+}
+/* styling the navBar */
+.navbar {
+  /* border: 1px solid yellow; */
+  list-style: none;
+  margin-left: -100px;
+}
+.navbar li {
+  display: inline;
+  margin-left: 20px;
+}
+.navbar li a {
+  font-weight: 800;
+}
+
+.color {
+  color: white;
+  text-decoration: none;
+}
+/* header form #findMovie {
+  background-color: rgb(29, 1, 56);
+} */
+#findMovie::placeholder {
+  color: white;
+}
+.button {
+  color: white;
+  background-color: rgb(1, 143, 199);
+}
+
+main section:nth-child(1) #playNow {
+  background-color: rgb(1, 143, 199);
+  color: white;
+}
+main section:nth-child(1) #watchLater {
+  background-color: #00031c;
+  color: white;
+}
+
+.navEndFotter {
+  position: relative;
+  display: inline-block;
+}
+
+.navEndFotter::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Initially, the border has no width */
+  height: 1px; /* Border height */
+  background-color: transparent; /* Border color */
+  transition: width 0.3s; /* Transition property to animate the width change */
+}
+
+.navEndFotter:hover::after {
+  width: 100%; /* Expand the border width to 100% on hover */
+  background-color: white; /* Change the border color on hover */
+}
+
+/* .findMovie {
+  border-radius: 5px;
+  height: 30px;
+} */
+.input-container {
+  position: relative;
+  width: 200px;
+  margin-left: 200px;
+  /* Adjust width as needed */
+}
+
+.colorbar {
+  /* Your existing styles for input */
+  padding: 10px 30px 10px 40px; /* Adjust padding to accommodate the icon */
+  border: 1px solid #929292;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.search-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px; /* Adjust position as needed */
+  color: #aaa; /* Adjust color as needed */
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+}
+
+.search-button:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+.selectbar {
+  position: absolute;
+  margin-left: 77%;
+}
+.selectbar .select-icon {
+  background-color: transparent;
+  color: white;
+}
+.selectbar .select {
+  color: white;
+  font-weight: 800;
+  background-color: transparent;
+  border: none;
+}
+.selectbar .select option {
+  background-color: rgb(29, 1, 56);
+  color: white; /* Change option text color */
+  font-weight: 800; /* Change option font weight */
+}
+.buttonGradient {
+  border-radius: 15px;
+  height: 40px;
+  width: 120px;
+  font-weight: 600;
+  color: black;
+  background-color: #a3a3a3;
+  justify-content: center;
+  margin-right: 90px;
+}
+/* And styling Fotteer */
+/* Footer Styling */
+footer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  background-color: #161934;
+}
+
+.part {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Logo and Connect with Us */
+.part.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.part.logo h1 a {
+  margin: 0;
+  color: white;
+  text-decoration: none;
+}
+.part.logo h1 a:hover {
+  color: #007bff;
+}
+
+.icon a {
+  text-decoration: none;
+  color: white;
+  margin: 10px 0 0 10px;
+}
+.icon a:hover {
+  color: #007bff;
+}
+.part.help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.part.help a {
+  text-decoration: none;
+  color: #707280;
+  margin: 5px 0;
+}
+
+/* Download Section */
+.part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.part.download h3 {
+  margin: 10px 0;
+}
+
+.part.download img {
+  margin: 10px;
+}
+
+/* Responsive Touch */
+.part a:hover {
+  color: #007bff;
+}
+.act {
+  display: flex;
+}
+.act span {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.last_part {
+  display: flex;
+  justify-content: space-between;
+  background-color: #161934;
+  padding: 20px 100px;
+  color: #bfbfc7;
+  border-top: 1px solid #717172;
+}
+.last_part p:nth-child(2) {
+  margin-left: 500px;
+}
+.last_part span {
+  /* border: 1px solid red; */
+  margin-top: -1px;
+}
+.last_part p:nth-child(2),
+span {
+  color: white;
+}
+.last_part p:nth-child(2):hover {
+  color: #483d98;
+}
+
+.last_part span:hover {
+  color: #483d98;
+}
+/* styling the body of the page */
+.backImg img {
+  position: relative;
+  width: 99.8%;
+  height: 600px;
+  opacity: 0.6;
+  margin-top: -100px;
+}
+#john {
+  position: absolute;
+  width: 150px;
+  height: 300px;
+  top: 20%;
+  margin-left: 25px;
+  border-radius: 5px;
+}
+.content {
+  position: absolute;
+  top: 20%;
+  margin-left: 17%;
+  width: 82%;
+}
+.content p:nth-child(1) {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 800;
+}
+.content p:nth-child(2),
+span {
+  color: #707280;
+  margin: 10px 0;
+}
+.content p:nth-child(2) span:nth-child(3) {
+  border: 1px solid rgb(63, 63, 63);
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(63, 63, 63);
+  padding: 5px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.content p:nth-child(3),
+span {
+  color: #707280;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.content p:nth-child(5) {
+  color: #707280;
+  margin: 10px 0;
+  font-weight: 700;
+  width: 40%;
+}
+.content p:nth-child(6) {
+  color: white;
+  margin: 12px 0;
+  font-weight: 700;
+}
+.content p:nth-child(7) span {
+  color: white;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.content p:nth-child(8) span {
+  color: white;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.content p:nth-child(7),
+p:nth-child(8) {
+  color: #717172;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.btn {
+  /* border: 1px solid red; */
+  margin: 10px 0;
+}
+.btn_style {
+  border: 1px solid #1a1d33;
+  border-radius: 5px;
+  color: white;
+  background-color: #1a1d33;
+  width: 150px;
+  font-size: 20px;
+  padding: 10px 5px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.firstBtn {
+  margin-left: 0;
+}
+.newStyle {
+  margin: 20px 0;
+  width: 300px;
+}
+.Stylebtn {
+  margin-left: -20px;
+}
+
+.newStylebtn {
+  background-color: #6c52ee;
+}
+.secondSection img {
+  width: 100px;
+  height: 150px;
+}
+.secondSection {
+  margin-top: 15px;
+  /* margin-left: 30px; */
+  width: 100%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+#one {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  margin-left: 100px;
+  height: 465px;
+  width: 200px;
+  align-items: center;
+}
+#two {
+  width: 600px;
+  height: 250px;
+  align-items: center;
+}
+#theree {
+  width: 150px;
+  height: 250px;
+  margin-left: -30px;
+  align-items: center;
+}
+#four {
+  width: 200px;
+  height: 180px;
+  align-items: center;
+}
+
+#five {
+  width: 550px;
+  height: 180px;
+  margin-left: -430px;
+  align-items: center;
+}
